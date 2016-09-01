@@ -1,0 +1,70 @@
+~/apw2016/demo\-> clear ; ll ; cat * ; ./p5fp6.pl ; ./jfp5.pl ; ./p6fp5.pl
+total 24
+drwxrwxr-x 4 ghost 4096 Aug 31 08:19 _Inline
+-rwxrwxr-x 1 ghost  316 Aug 31 19:39 p5fp6.pl
+-rwxrwxr-x 1 ghost  285 Sep  1 07:35 jfp5.pl
+drwxrwxr-x 4 ghost 4096 Sep  1 13:57 ..
+-rwxrwxr-x 1 ghost  244 Sep  1 14:53 p6fp5.pl
+drwxrwxr-x 3 ghost 4096 Sep  1 14:53 .
+cat: _Inline: Is a directory
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use Inline Java => 'DATA';
+
+my $java = new Hello();
+$java->printSomething("Hello Bradley!");
+
+__DATA__
+__Java__
+public class Hello {
+    public void printSomething(final String something) {
+        System.out.println(something);
+    }
+}
+#!/usr/bin/env perl6
+
+#use MONKEY-SEE-NO-EVAL; <-- sometimes
+
+use Inline::Perl5;
+my $p5 = Inline::Perl5.new;
+
+$p5.run(q|
+package Person;
+use Moose;
+
+has 'name' => (is => 'rw');
+
+1;
+|);
+
+$p5.use('Person');
+
+EVAL q|
+my $person = Person->new(name => 'Bradley');
+print 'Hello ', $person->name, "!\n";
+|, :lang<Perl5>;
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use File::Slurp qw|read_file|;
+
+use Inline::Perl6;
+
+my $p6 = Inline::Perl6->new;
+
+$p6->run('
+class Person {
+    has Stringy $.name;
+}
+
+say "Hello ", Person.new(name => "Bradley").name(), "!";
+');
+Hello Bradley!
+Hello Bradley!
+Hello Bradley!
+~/apw2016/demo\->
