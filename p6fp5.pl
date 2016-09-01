@@ -3,8 +3,6 @@
 use strict;
 use warnings;
 
-use File::Slurp qw|read_file|;
-
 use Inline::Perl6;
 
 my $p6 = Inline::Perl6->new;

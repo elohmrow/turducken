@@ -1,7 +1,5 @@
 #!/usr/bin/env perl6
 
-#use MONKEY-SEE-NO-EVAL; <-- sometimes
-
 use Inline::Perl5;
 my $p5 = Inline::Perl5.new;
 
