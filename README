@@ -1,8 +1,7 @@
 Turducken
 =========
 
-A Turducken is a culinary monstrosity created by Americans.  To make a Turducken, you shove a chicken into the gastric
-bypass of a duck, and then shove the resultant duck into the gastric bypass of a turkey.
+A Turducken is a culinary monstrosity created by Americans.  To make a Turducken, you shove a chicken into the gastric bypass of a duck, and then shove the resultant duck into the gastric bypass of a turkey.
 
 Who doesn't want meat as stuffing, right?
 
@@ -12,6 +11,8 @@ In this case:
     - the Turkey is Perl6
     - the Duck is Perl (5)
     - the Chicken is Java
+
+_turducken.pl is the one that works.
 
 some slides: http://slides.com/elohmrow/release-the-turducken/fullscreen
 
