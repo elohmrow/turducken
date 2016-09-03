@@ -12,7 +12,11 @@ In this case:
     - the Duck is Perl (5)
     - the Chicken is Java
 
-_turducken.pl is the one that works.
+they all work, but _turducken.pl is the one turducken that so far works.
 
 some slides: http://slides.com/elohmrow/release-the-turducken/fullscreen
+
+more links:
+-   http://act.yapc.eu/alpineperl2016/talk/6870
+-   http://niner.name/talks/
 
